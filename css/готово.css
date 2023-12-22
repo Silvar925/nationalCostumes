@@ -1,4 +1,4 @@
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 320px) and (max-width: 768px) {
     header {
         display: flex;
         justify-content: center;
@@ -12,6 +12,7 @@
 
     .banner-box {
         height: 100vh;
+        align-items: end;
     }
 
     .banner-box_content {
@@ -35,7 +36,7 @@
     }
 
     .dress {
-        display: flex;
+        display: block;
         margin-top: 20px;
         margin-left: 20px;
         margin-right: 20px;
@@ -47,16 +48,14 @@
     }
 
     .heading_title {
-        /* width: 300px; */
+        width: 300px;
         flex-direction: column;
         gap: 15px;
         margin-bottom: 20px;
     }
 
     .heading_title ul {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        flex-direction: column;
         border: 0;
         width: 300px;
         gap: 10px;
@@ -74,7 +73,7 @@
     
 
     .dress_content_1_line {
-        flex-direction: row;
+        flex-direction: column;
     }
 
     .dress_content_left {
@@ -123,7 +122,7 @@
     }
 
     .banner-box_analogue_banner {
-        max-width: 700px;
+        max-width: 300px;
     }
 
     .banner-box_analogue_banner h1 {
@@ -138,6 +137,7 @@
     .banner-box_analogue p {
         font-size: 20px;
         width: auto;
+        max-width: 300px;
     }
 
     .training {
