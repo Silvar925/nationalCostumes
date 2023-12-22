@@ -36,16 +36,25 @@
     }
 
     .dress {
+        display: block;
         margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
-    .dress_title {
+    .btnShowMore {
+        display: flex;
+        justify-content: center;
+    }
+
+    .heading_title {
         width: 300px;
         flex-direction: column;
         gap: 15px;
+        margin-bottom: 20px;
     }
 
-    .dress_title ul {
+    .heading_title ul {
         flex-direction: column;
         border: 0;
         width: 300px;
@@ -54,11 +63,9 @@
 
     .dress_content {
         flex-direction: column;
+        max-width: 300px;
     }
     
-    .btnShowMore {
-        display: none;
-    }
 
     .dress_content_1_line {
         flex-direction: column;
@@ -93,6 +100,54 @@
     }
 
     footer {
+        display: flex;
+        margin-top: 25px;
+        flex-direction: column;
+    }
+
+    .footer_content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer_right {
         display: none;
+        max-width: 300px;
+        gap: 0;
+    }
+
+    .banner-box_analogue_banner {
+        max-width: 300px;
+    }
+
+    .banner-box_analogue_banner h1 {
+        font-size: 40px;
+        width: 100px;
+    }
+
+    .blackLayer {
+        width: 150px;
+    }
+
+    .banner-box_analogue p {
+        font-size: 20px;
+        width: auto;
+        max-width: 300px;
+    }
+
+    .training {
+        gap: 30px;
+    }
+
+    .training_content {
+        gap: 25px;
+    }
+
+    .training h1 {
+        font-size: 30px;
+    }
+
+    .studentWork {
+        font-size: 30px;
     }
 }
