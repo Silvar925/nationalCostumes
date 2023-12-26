@@ -1,6 +1,8 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 @font-face {
@@ -37,21 +39,44 @@ header nav ul li {
 }
 
 header nav ul li a {
+    display: block;
+    padding-bottom: 4px;
     text-decoration: none;
     color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+header nav ul li a:hover {
+    border-bottom: 1px solid black;
 }
 
 .banner-box_main {
     display: flex;
+    flex-direction: column;
     padding-top: 133px;
-    justify-content: center;
+    /* justify-content: center; */
+    align-items: flex-end;
+    padding: 100px 240px;
+}
+
+.banner-box_main_img {
+    width: 940px;
+    /* height: 613px; */
+}
+
+.banner-box_main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .banner-box_main h1 {
     font-family: var(--literature);
     margin-top: 101px;
-    width: 464px;
+    width: 682px;
     font-size: 48px;
+    position: absolute;
+    left: 350px;
 }
 
 .banner-box {
@@ -255,7 +280,7 @@ footer {
 
 .my_business {
     width: 170px;
-    height: 72px; 
+    height: 72px;
 }
 
 .header_analogue nav ul li a {
@@ -410,34 +435,65 @@ footer {
     flex-direction: column;
     align-items: center;
     margin-top: 234px;
+    gap: 20px;
 }
 
-.products h1 {
+.products-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.products-title h1 {
     color: #68513F;
-    font-size: 96px;
+    font-size: 76px;
     margin-top: 50px;
-    font-family: var(--literature);
+    font-family: var(--Sweet);
 }
 
-.products h2 {
+.products-title h2 {
     margin-top: 10px;
     font-size: 32px;
+    font-family: var(--literature);
 }
 
 .card_list {
     display: flex;
     gap: 14px;
-    margin-top: 60px;
+    margin-top: 50px;
 }
 
 .card-main {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 325px;
     height: 457px;
     background-color: #E7DED8;
     border-radius: 10px;
-    padding: 10px;
+    padding: 10px 0;
+}
+
+.card-main a {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.card-main a:hover {
+    background-color: #68513F;
+    color: white;
+}
+
+.card_main_up {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.card_main_up img {
+    border-radius: 10px;
 }
 
 .card-main p {
@@ -446,15 +502,16 @@ footer {
     font-size: 24px;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
-    margin-top: 0px;
 }
 
 .card-main a {
     display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     text-decoration: none;
     color: black;
-    background-color: #DACEC6;
+    background-color: #F1EBE7;
     padding: 12px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
@@ -482,7 +539,7 @@ footer {
     display: flex;
     flex-direction: column;
     text-align: center;
-    align-content: center;
+    gap: 44px;
 }
 
 .service_right h1 {
@@ -508,15 +565,23 @@ footer {
 }
 
 .btnToLearnMore {
-    background-color: #DACEC6;
-    color: #68513F;
-    border: 1px solid #68513F;
-    padding: 12px;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.btnToLearnMore_box a {
     border-radius: 30px;
-    width: 191px;
-    margin-top: 32px;
+    border: 1px solid #DACEC6;
+    background: #F1EBE7;
+    padding: 12px 41px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #68513F;
+}
+
+.btnToLearnMore_box a:hover {
+    background-color: #68513F;
+    color: white;
 }
 
 .gallery {
@@ -569,6 +634,16 @@ footer {
     font-size: 20px;
 }
 
+
+.border-q a {
+    text-decoration: none;
+    color: white;
+}
+
+.border-q a:hover {
+    text-decoration: underline;
+}
+
 .contacs {
     margin-top: 89px;
 }
@@ -582,9 +657,23 @@ footer {
 
 .contacs_content h1 {
     margin-bottom: 56px;
+    color: #000;
+    text-align: center;
+    font-family: var(--literature);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 98px;
 }
 
-.btnCONTACT {
+.buttons-box {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 158px;
+}
+
+.buttons-box a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -597,15 +686,94 @@ footer {
     width: 497px;
     height: 70px;
     border-radius: 50px;
+    text-decoration: none;
+    color: black;
 }
 
-.buttons-box {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
-.buttons-box:hover {
+.buttons-box a:hover {
     background-color: black;
     color: white;
+}
+
+.about_us {
+    display: flex;
+    justify-content: center;
+}
+
+.about_us_container {
+    display: flex;
+    gap: 50px;
+}
+
+.about_us_container_left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 402px;
+    gap: 25px;
+}
+
+.about_us_container_left img:nth-child(1) {
+    margin-left: 300px;
+}
+
+.about_us_container_center {
+    display: flex;
+    flex-direction: column;
+    width: 402px;
+    gap: 20px;
+    margin-top: 105px;
+}
+
+.about_us_container_center h1 {
+    color: #000;
+    text-align: center;
+    font-family: var(--literature);
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 98px;
+}
+
+.about_us_container_center p {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    
+    gap: 20px;
+    color: #000;
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.about_us_container_center a {
+    background-color: #F1EBE7;
+    color: #68513F;
+    padding: 13px 29px;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 19.6px;
+}
+
+.about_us_container_right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 402px;
+    gap: 26px;
+}
+
+.about_us_container_right img:nth-child(2) {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 550px;
 }
