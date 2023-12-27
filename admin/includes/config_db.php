@@ -2,125 +2,137 @@
 function getSchema()
 {
     return [
-        'services' => [
-            'menuName' => 'Услуги',
+        'woman' => [
+            'menuName' => 'Платья',
             'fields' => [
                 'title' => [
-                    'name' => 'Заголовок услуги',
+                    'name' => 'Наименование',
                     'element' => 'input',
                     'type' => 'text',
-                    'required' => true,
-                ],
-
-                'text' => [
-                    'name' => 'Текст услуги',
-                    'element' => 'textarea',
-                    'type' => 'text',
-                    'required' => true,
-                ],
-
-                'price' => [
-                    'name' => 'Цена услуги',
-                    'element' => 'input',
-                    'type' => 'number',
                     'required' => true,
                 ],
 
                 'img' => [
-                    'name' => 'Картинки услуги',
+                    'name' => 'Картинки',
                     'element' => 'input',
                     'type' => 'file',
                     'required' => true,
                 ],
             ],
         ],
-        'shares' => [
-            'menuName' => 'Акции',
+
+        'man' => [
+            'menuName' => 'Мужские',
             'fields' => [
                 'title' => [
-                    'name' => 'Заголовок акции',
+                    'name' => 'Наименование',
                     'element' => 'input',
                     'type' => 'text',
                     'required' => true,
                 ],
 
-                'text' => [
-                    'name' => 'Текст акции',
-                    'element' => 'textarea',
-                    'type' => 'text',
-                    'required' => true,
-                ],
-
                 'img' => [
-                    'name' => 'Картинки акции',
+                    'name' => 'Картинки',
                     'element' => 'input',
                     'type' => 'file',
                     'required' => true,
                 ],
             ],
         ],
-        'galery' => [
-            'menuName' => 'Фотографии',
-            'fields' => [                
-                'tags_next' => [
-                    'name' => 'Теги картинок',
+
+        'child' => [
+            'menuName' => 'Детские',
+            'fields' => [
+                'title' => [
+                    'name' => 'Наименование',
+                    'element' => 'input',
+                    'type' => 'text',
+                    'required' => true,
+                ],
+
+                'type' => [
+                    'name' => 'Тег',
                     'element' => 'input',
                     'type' => 'hidden',
-                    'data' => ["Эстетическая трихология", "Стрижка мужская", "Стрижка женская", "Стрижка детская", "СПА уходовые процедуры", "Окрашивание", "Биозавивка", "Патронажная услуга"],
+                    'data' => ["Для девочек", "Для мальчиков"],
                     'selectOne' => true,
-                    'required' => false,
+                    'required' => true,
                 ],
 
                 'img' => [
-                    'name' => 'Картинки для галереи',
+                    'name' => 'Картинки',
                     'element' => 'input',
                     'type' => 'file',
                     'required' => true,
                 ],
             ],
         ],
-        'comment' => [
-            'menuName' => 'Отзывы',
+
+        'baby' => [
+            'menuName' => 'Для младенцев',
             'fields' => [
                 'title' => [
-                    'name' => 'ФИО',
+                    'name' => 'Наименование',
                     'element' => 'input',
                     'type' => 'text',
                     'required' => true,
                 ],
 
-                'text' => [
-                    'name' => 'Текст отзыва',
-                    'element' => 'textarea',
-                    'type' => 'text',
+                'type' => [
+                    'name' => 'Тег',
+                    'element' => 'input',
+                    'type' => 'hidden',
+                    'data' => ["Комплекты для люльки", "Костюмы для младенцев"],
+                    'selectOne' => true,
                     'required' => true,
                 ],
 
                 'img' => [
-                    'name' => 'Фотография',
+                    'name' => 'Картинки',
                     'element' => 'input',
                     'type' => 'file',
                     'required' => true,
                 ],
             ],
         ],
-        'pricelist' => [
-            'menuName' => 'Прайс лист',
+
+        'study' => [
+            'menuName' => 'Работы учеников',
             'fields' => [
                 'title' => [
-                    'name' => 'Выбор услуги',
-                    'element' => 'select',
-                    'options' => 'services',
+                    'name' => 'Наименование',
+                    'element' => 'input',
+                    'type' => 'text',
                     'required' => true,
                 ],
 
-                'text' => [
-                    'name' => 'Текст отзыва',
-                    'element' => 'textarea',
-                    'type' => 'text',
+                'img' => [
+                    'name' => 'Картинки',
+                    'element' => 'input',
+                    'type' => 'file',
                     'required' => true,
                 ],
             ],
         ],
+
+        'atelier' => [
+            'menuName' => 'Ателье',
+            'fields' => [
+                'title' => [
+                    'name' => 'Наименование',
+                    'element' => 'input',
+                    'type' => 'text',
+                    'required' => true,
+                ],
+
+                'img' => [
+                    'name' => 'Картинки',
+                    'element' => 'input',
+                    'type' => 'file',
+                    'required' => true,
+                ],
+            ],
+        ],
+       
     ];
 }
