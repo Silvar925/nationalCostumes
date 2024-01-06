@@ -46,44 +46,60 @@ function getFileExtension(filename) {
 
 // ------------------------------------------------------------------------------------------------
 
-getData("woman").then((response) => {
-  console.log(response);
+getData("man").then((response) => {
+  // console.log(response);
   response.forEach((element) => {
-    console.log(element);
+    // console.log(element);
   });
 });
 
-getData("man").then((response) => {
-  console.log(response);
+getData("woman").then((response) => {
+  let blocks = $(".womangrid").empty();
   response.forEach((element) => {
-    console.log(element);
+    for (let i = 0; i < stringToImageArray(element.img).length; i++) {
+      blocks.append(`
+          <div class="grid-item">
+            <img src="admin/img/${
+              stringToImageArray(element.img)[i]
+            }" alt="" srcset="">
+          </div>
+      `);
+    }
   });
+
+    $(".grid").masonry({
+      columnWidth: 10,
+      itemSelector: ".grid-item",
+      gutter: 10,
+    });
+
 });
+
 
 getData("child").then((response) => {
-  console.log(response);
+  // console.log(response);
   response.forEach((element) => {
-    console.log(element);
+    // console.log(element);
   });
 });
 
 getData("baby").then((response) => {
-  console.log(response);
+  // console.log(response);
   response.forEach((element) => {
-    console.log(element);
+    // console.log(element);
   });
 });
 
 getData("study").then((response) => {
-  console.log(response);
+  // console.log(response);
   response.forEach((element) => {
-    console.log(element);
+    // console.log(element);
   });
 });
 
 getData("atelier").then((response) => {
-  console.log(response);
+  // console.log(response);
   response.forEach((element) => {
-    console.log(element);
+    // console.log(element);
   });
 });

@@ -9,7 +9,7 @@ function getSchema()
                     'name' => 'Наименование',
                     'element' => 'input',
                     'type' => 'text',
-                    'required' => true,
+                    'required' => false,
                 ],
 
                 'img' => [
@@ -28,7 +28,7 @@ function getSchema()
                     'name' => 'Наименование',
                     'element' => 'input',
                     'type' => 'text',
-                    'required' => true,
+                    'required' => false,
                 ],
 
                 'img' => [
@@ -47,7 +47,7 @@ function getSchema()
                     'name' => 'Наименование',
                     'element' => 'input',
                     'type' => 'text',
-                    'required' => true,
+                    'required' => false,
                 ],
 
                 'type' => [
@@ -75,7 +75,7 @@ function getSchema()
                     'name' => 'Наименование',
                     'element' => 'input',
                     'type' => 'text',
-                    'required' => true,
+                    'required' => false,
                 ],
 
                 'type' => [
@@ -103,7 +103,7 @@ function getSchema()
                     'name' => 'Наименование',
                     'element' => 'input',
                     'type' => 'text',
-                    'required' => true,
+                    'required' => false,
                 ],
 
                 'img' => [
@@ -122,7 +122,7 @@ function getSchema()
                     'name' => 'Наименование',
                     'element' => 'input',
                     'type' => 'text',
-                    'required' => true,
+                    'required' => false,
                 ],
 
                 'img' => [

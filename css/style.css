@@ -88,6 +88,7 @@ header nav ul li a:hover {
   background-image: url("/img/banner.png");
   width: 100%;
   margin-bottom: 86px;
+  position: relative;
 }
 
 .banner-box_content {
@@ -98,13 +99,13 @@ header nav ul li a:hover {
   height: 508px;
   background-image: url("/img/bannerBlack.png");
 }
-
+.banner-box_content img{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
 .cradleKitsBanner {
   background-image: url("/img/cradleKits.png");
-}
-
-.banner-box_content img {
-  margin-top: 80px;
 }
 
 .banner-box_content h1 {
@@ -112,13 +113,6 @@ header nav ul li a:hover {
   font-size: 48px;
   color: white;
   width: 601px;
-}
-
-.dress {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .dress h1 {
@@ -239,6 +233,11 @@ header nav ul li a:hover {
   font-family: "Montserrat", sans-serif;
   padding: 10px;
   font-size: 24px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 footer {
@@ -775,4 +774,44 @@ footer {
   display: flex;
   justify-content: flex-end;
   margin-left: 550px;
+}
+
+.dress {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+/* .grid {
+  padding: 10px 60px;
+}
+
+.grid-item {
+  float: left;
+  margin-bottom: 4px;
+}
+
+.grid-item img {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+} */
+
+.grid {
+  padding: 10px 60px;
+}
+
+.grid-item {
+  float: left;
+  margin-bottom: 4px; 
+  /* Опционально: вы можете установить фиксированный размер для grid-item, если нужно */
+}
+
+.grid-item img {
+  max-width: 640px; /* изображение будет масштабироваться в пределах контейнера */
+  max-height: 640px; /* максимальная высота */
+  width: auto;
+  height: auto;
+  object-fit: cover; /* или 'contain', если не хотите обрезать изображения */
 }
