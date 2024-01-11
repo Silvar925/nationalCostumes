@@ -799,19 +799,22 @@ footer {
 } */
 
 .grid {
-  padding: 10px 60px;
+  padding: 10px 80px;
 }
 
 .grid-item {
   float: left;
-  margin-bottom: 4px; 
+  margin-bottom: 10px;
+
   /* Опционально: вы можете установить фиксированный размер для grid-item, если нужно */
 }
 
 .grid-item img {
-  max-width: 640px; /* изображение будет масштабироваться в пределах контейнера */
-  max-height: 640px; /* максимальная высота */
   width: auto;
   height: auto;
-  object-fit: cover; /* или 'contain', если не хотите обрезать изображения */
+  min-width: 310px;
+  min-height: 310px;
+  max-width: 645px;
+  max-height: 635px;
+  object-fit: cover;
 }

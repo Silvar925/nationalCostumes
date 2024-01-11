@@ -47,10 +47,24 @@ function getFileExtension(filename) {
 // ------------------------------------------------------------------------------------------------
 
 getData("man").then((response) => {
-  // console.log(response);
+  let blocks = $(".mangrid").empty();
   response.forEach((element) => {
-    // console.log(element);
+    for (let i = 0; i < stringToImageArray(element.img).length; i++) {
+      blocks.append(`
+          <div class="grid-item">
+            <img src="admin/img/${
+              stringToImageArray(element.img)[i]
+            }" alt="" srcset="">
+          </div>
+      `);
+    }
   });
+
+    $(".grid").masonry({
+      columnWidth: 8,
+      itemSelector: ".grid-item",
+      gutter: 40,
+    });
 });
 
 getData("woman").then((response) => {
@@ -68,9 +82,9 @@ getData("woman").then((response) => {
   });
 
     $(".grid").masonry({
-      columnWidth: 10,
+      columnWidth: 8,
       itemSelector: ".grid-item",
-      gutter: 10,
+      gutter: 40,
     });
 
 });
@@ -103,3 +117,4 @@ getData("atelier").then((response) => {
     // console.log(element);
   });
 });
+
