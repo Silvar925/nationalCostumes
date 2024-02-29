@@ -44,77 +44,146 @@ function getFileExtension(filename) {
   return filename.slice(((filename.lastIndexOf(".") - 1) >>> 0) + 2);
 }
 
+function getImageSize(url) {
+  return new Promise((resolve, reject) => {
+    let img = new Image();
+    img.onload = function() {
+      resolve({ width: this.width, height: this.height });
+    };
+    img.onerror = reject;
+    img.src = url;
+  });
+}
+
 // ------------------------------------------------------------------------------------------------
 
-getData("man").then((response) => {
-  let blocks = $(".mangrid").empty();
-  response.forEach((element) => {
-    for (let i = 0; i < stringToImageArray(element.img).length; i++) {
-      blocks.append(`
-          <div class="grid-item">
-            <img src="admin/img/${
-              stringToImageArray(element.img)[i]
-            }" alt="" srcset="">
+getData("woman").then(async (response) => {
+  let blocks = $("#gallery_woman").empty();
+
+  for (const element of response) {
+    for (const imageName of stringToImageArray(element.img)) {
+      const imageUrl = `admin/img/${imageName}`;
+      try {
+        const { width, height } = await getImageSize(imageUrl);
+        const tallClass = width < height ? 'tall' : '';
+        blocks.append(`
+          <div class="image-container ${tallClass}">
+            <img src="${imageUrl}" alt="" srcset="">
           </div>
-      `);
+        `);
+      } catch (error) {
+        console.error("Error loading image:", imageUrl, error);
+      }
     }
-  });
-
-    $(".grid").masonry({
-      columnWidth: 8,
-      itemSelector: ".grid-item",
-      gutter: 40,
-    });
+  }
 });
 
-getData("woman").then((response) => {
-  let blocks = $(".womangrid").empty();
-  response.forEach((element) => {
-    for (let i = 0; i < stringToImageArray(element.img).length; i++) {
-      blocks.append(`
-          <div class="grid-item">
-            <img src="admin/img/${
-              stringToImageArray(element.img)[i]
-            }" alt="" srcset="">
+
+getData("man").then(async (response) => {
+  let blocks = $("#gallery_man").empty();
+
+  for (const element of response) {
+    for (const imageName of stringToImageArray(element.img)) {
+      const imageUrl = `admin/img/${imageName}`;
+      try {
+        const { width, height } = await getImageSize(imageUrl);
+        const tallClass = width < height ? 'tall' : '';
+        blocks.append(`
+          <div class="image-container ${tallClass}">
+            <img src="${imageUrl}" alt="" srcset="">
           </div>
-      `);
+        `);
+      } catch (error) {
+        console.error("Error loading image:", imageUrl, error);
+      }
     }
-  });
-
-    $(".grid").masonry({
-      columnWidth: 8,
-      itemSelector: ".grid-item",
-      gutter: 40,
-    });
-
+  }
 });
 
 
-getData("child").then((response) => {
-  // console.log(response);
-  response.forEach((element) => {
-    // console.log(element);
-  });
+getData("child").then(async (response) => {
+  let blocks = $("#gallery_child").empty();
+
+  for (const element of response) {
+    for (const imageName of stringToImageArray(element.img)) {
+      const imageUrl = `admin/img/${imageName}`;
+      try {
+        const { width, height } = await getImageSize(imageUrl);
+        const tallClass = width < height ? 'tall' : '';
+        blocks.append(`
+          <div class="image-container ${tallClass}" data-search="${element.type}">
+            <img src="${imageUrl}" alt="" srcset="">
+          </div>
+        `);
+      } catch (error) {
+        console.error("Error loading image:", imageUrl, error);
+      }
+    }
+  }
 });
 
-getData("baby").then((response) => {
-  // console.log(response);
-  response.forEach((element) => {
-    // console.log(element);
-  });
+getData("baby").then(async (response) => {
+  let blocks = $("#gallery_baby").empty();
+
+  for (const element of response) {
+    for (const imageName of stringToImageArray(element.img)) {
+      const imageUrl = `admin/img/${imageName}`;
+      try {
+        const { width, height } = await getImageSize(imageUrl);
+        const tallClass = width < height ? 'tall' : '';
+        blocks.append(`
+          <div class="image-container ${tallClass}" data-search="${element.type}">
+            <img src="${imageUrl}" alt="" srcset="">
+          </div>
+        `);
+      } catch (error) {
+        console.error("Error loading image:", imageUrl, error);
+      }
+    }
+  }
 });
 
-getData("study").then((response) => {
-  // console.log(response);
-  response.forEach((element) => {
-    // console.log(element);
-  });
+
+getData("study").then(async (response) => {
+  let blocks = $("#gallery_study").empty();
+
+  for (const element of response) {
+    for (const imageName of stringToImageArray(element.img)) {
+      const imageUrl = `admin/img/${imageName}`;
+      try {
+        const { width, height } = await getImageSize(imageUrl);
+        const tallClass = width < height ? 'tall' : '';
+        blocks.append(`
+          <div class="image-container ${tallClass}">
+            <img src="${imageUrl}" alt="" srcset="">
+          </div>
+        `);
+      } catch (error) {
+        console.error("Error loading image:", imageUrl, error);
+      }
+    }
+  }
 });
 
-getData("atelier").then((response) => {
-  // console.log(response);
-  response.forEach((element) => {
-    // console.log(element);
-  });
+
+getData("atelier").then(async (response) => {
+  let blocks = $("#gallery_atelier").empty();
+
+  for (const element of response) {
+    for (const imageName of stringToImageArray(element.img)) {
+      const imageUrl = `admin/img/${imageName}`;
+      try {
+        const { width, height } = await getImageSize(imageUrl);
+        const tallClass = width < height ? 'tall' : '';
+        blocks.append(`
+          <div class="image-container ${tallClass}">
+            <img src="${imageUrl}" alt="" srcset="">
+          </div>
+        `);
+      } catch (error) {
+        console.error("Error loading image:", imageUrl, error);
+      }
+    }
+  }
 });
 

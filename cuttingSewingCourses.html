@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
     
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/adaptive.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
     
     <title>Курсы кройки и шитья</title>
 </head>
@@ -122,44 +124,20 @@
     <section class="dress">
 
         <h1 class="studentWork">Работы учеников</h1>
-
-        <div class="dress_content_3_line_1">
-
-            <div class="dress_content_3_line_1_left">
-                <div class="row">
-                    <img src="img/Rectangle_6.png" alt="">
-                </div>
-
-                <div class="row">
-                    <img src="img/Rectangle_10.png" alt="">
-                    <img src="img/Rectangle_11.png" alt="">
-                </div>
-            </div>
-
-
-            <div class="dress_content_3_line_1_right">
-                <div class="row">
-                    <img src="img/Rectangle_12.png" alt="#" class="temp">
-                    </div>
-
-
-                    <div class="column">
-                        <img src="img/Rectangle_13.png" alt="#">
-                        <img src="img/Rectangle_14.png" alt="#">
-                    </div>
-                </div>
-            </div>
+        <div class="gallery" id="gallery_study">
+            <!-- <div class="image-container">
+                <img src="img/woman.png" alt="" srcset="">
+            </div> -->
         </div>
-
-        <div class="btnShowMore">
-            Показать еще +
+        <div class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImage">
         </div>
-
     </section>
 
     <footer>
 
-        <div class="footer_content">
+        <!-- <div class="footer_content">
             <div class="footer_left">
                 <p>Политика конфиденциальности</p>
                 <p>Согласие на обработку персональных данных</p>
@@ -170,12 +148,13 @@
                 <img src="img/logo_alazar_black.png" alt="#" class="alazar_studio">
                 <img src="img/bys.png" alt="#" class="my_business">
             </div>
-        </div>
+        </div> -->
 
 
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
     <script src="js/header.js"></script>
     <script src="js/footer.js"></script>
     <script src="js/main.js"></script>

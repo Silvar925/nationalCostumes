@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/adaptive.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
 
     <title>Костюмы для новорожденных</title>
 </head>
@@ -32,51 +34,27 @@
 
     <section class="dress">
         <div class="heading_title">
-            <h1>ДЛЯ НОВОРОЖЛЕННЫХ</h1>
+            <!-- <h1>ДЛЯ НОВОРОЖДЕННЫХ</h1> -->
             <ul>
-                <li><a href="#">Все</a></li>
-                <li><a href="#">Классические</a></li>
-                <li><a href="#">Современные</a></li>
+                <li><div class="filter_newBorn heading_title__active" id="allShowImg_newBorn" data-name="Все">Все</div></li>
+                <li><div class="filter_newBorn" id="sleepShowImg_newBorn" data-name="Комплекты для люльки">Комплекты для люльки</div></li>
+                <li><div class="filter_newBorn" id="babyShowImg_newBorn" data-name="Костюмы для младенцев">Костюмы для младенцев</div></li>
             </ul>
         </div>
-
-        <div class="dress_content">
-            <div class="dress_content_1_line">
-                <div class="dress_content_left">
-                    <div class="dress_content_left_1">
-                        <img src="img/baby_1.png" alt="#">
-                        <img src="img/baby_2.png" alt="#">
-                    </div>
-
-                    <img src="img/baby_3.png" alt="">
-                </div>
-
-                <div class="dress_content_right">
-                    <img src="img/baby_5.png" alt="#">
-                    <div class="dress_content_right_1">
-                        <img src="img/baby_6.png" alt="#">
-                        <img src="img/baby_7.png" alt="#">
-                    </div>
-                </div>
-            </div>
-
-            <div class="dress_content_2_line">
-                <img src="img/baby_8.png" alt="#">
-                <img src="img/baby_9.png" alt="#">
-                <img src="img/baby_10.png" alt="#">
-            </div>
-
+        <div class="gallery" id="gallery_baby">
+            <!-- <div class="image-container">
+                    <img src="img/woman.png" alt="" srcset="">
+                </div> -->
         </div>
-
-        <div class="btnShowMore">
-            Показать еще +
+        <div class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImage">
         </div>
-
     </section>
 
     <footer>
 
-        <div class="footer_content">
+        <!-- <div class="footer_content">
             <div class="footer_left">
                 <p>Политика конфиденциальности</p>
                 <p>Согласие на обработку персональных данных</p>
@@ -87,11 +65,12 @@
                 <img src="img/logo_alazar_black.png" alt="#" class="alazar_studio">
                 <img src="img/bys.png" alt="#" class="my_business">
             </div>
-        </div>
+        </div> -->
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
     <script src="js/header.js"></script>
     <script src="js/footer.js"></script>
     <script src="js/main.js"></script>
