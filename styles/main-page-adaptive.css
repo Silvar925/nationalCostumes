@@ -1,0 +1,155 @@
+@media (min-width: 320px) and (max-width: 1075px) {
+    .main {
+        display: flex;
+        gap: 50px;
+        flex-direction: column;
+    }
+
+    .product,
+    .service,
+    .contacts,
+    .about-us {
+        width: 100%;
+        margin-top: 0;
+        padding: 0 20px;
+    }
+
+    .hero {
+        padding: 0 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero__title {
+        position: static;
+        width: auto;
+        left: 0;
+        top: 0;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .hero__img {
+        width: 100%;
+        margin: 0;
+    }
+
+    .about-us {
+        flex-direction: column;
+    }
+
+    .about-us__second-item-1,
+    .about-us__second-item-2 {
+        margin: 0;
+    }
+
+    .about-us__list {
+        display: none;
+    }
+
+    .about-us__text {
+        width: 100%;
+    }
+
+    .product {
+        gap: 30px;
+    }
+
+    .product__banner {
+        width: 100%;
+    }
+
+    .product__list {
+        flex-wrap: wrap;
+    }
+
+    .product__list {
+        justify-content: center;
+    }
+
+    .product__card {
+        width: 100%;
+    }
+
+    .product__card-img {
+        width: 100%;
+    }
+
+    .product__sub-title {
+        text-align: center;
+    }
+
+    .service {
+        display: flex;
+        gap: 50px;
+        flex-direction: column;
+    }
+
+    .service__img,
+    .service__inner {
+        width: 100%;
+    }
+
+    .service__sub-title {
+        font-size: 1.125rem;
+    }
+
+    .contacts {
+        gap: 20px;
+    }
+
+    .contacts__button {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1158px) {
+    .hero,
+    .product,
+    .service,
+    .contacts,
+    .about-us {
+        padding: 0 20px;
+    }
+
+    .product__banner {
+        width: 100%;
+    }
+
+    .product__list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .about-us__second-item-2l {
+        margin-right: 40px;
+        margin: 0;
+    }
+
+    .about-us__second-item-1l,
+    .about-us__second-item-3l {
+        margin-left: 40px;
+        margin: 0;
+    }
+
+    .about-us__second-item-2r {
+        margin-left: 40px;
+        margin: 0;
+    }
+
+    .about-us__second-item-1r,
+    .about-us__second-item-3r {
+        margin-right: 40px;
+        margin: 0;
+
+    }
+
+    .hero__title {
+        left: 40px;
+        top: 212px;
+    }
+
+    .hero__img {
+        margin-left: 12vw;
+    }
+}

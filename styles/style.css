@@ -1,0 +1,100 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background: none;
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+
+@font-face {
+    font-family: "Literature Decor";
+    src: url("../fonts/Literature-Decor.ttf") format("truetype");
+
+    font-family: 'Sweet Mavka Script';
+    src: url('../fonts/Sweet-Mavka-Script.otf') format('truetype');
+}
+
+:root {
+    --literature: "Literature Decor", sans-serif;
+    --Sweet: "Sweet Mavka Script";
+    --accent-color: #68513f;
+    --alt-accent-color: #f1ebe7;
+    --transition: color 0.3s ease, transform 0.3s ease;
+    --card-background: #e7ded8;
+}
+
+/* Header */
+
+.header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__menu {
+    width: 20%;
+    display: flex;
+}
+
+.header__menu-list {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.header__menu-link {
+    color: black;
+    transition: all 0.3s ease-in-out;
+    font-family: "Montserrat";
+    font-size: 1rem;
+}
+
+.header__menu-link:hover {
+    color: var(--accent-color);
+}
+
+
+.footer {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--alt-accent-color);
+    padding: 60px 40px;
+}
+
+.footer__number {
+    display: flex;
+    gap: 5px;
+    font-family: 'Montserrat';
+    font-size: 1.125rem;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .header__menu {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .header__menu-list {
+        width: 100%;
+    }
+}

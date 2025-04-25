@@ -1,0 +1,262 @@
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero__title {
+    left: 12vw;
+    top: 110px;
+    width: 682px;
+    font-family: var(--literature);
+    font-size: 3rem;
+    position: absolute;
+}
+
+.hero__img {
+    margin-left: 540px;
+}
+
+.about-us {
+    margin-top: 100px;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-us__list {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+
+.about-us__inner {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-us__title {
+    font-family: var(--literature);
+    font-size: 3rem;
+}
+
+.about-us__text {
+    text-align: center;
+    width: 400px;
+    font-family: "Montserrat";
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    font-size: 1rem;
+    line-height: 150%;
+}
+
+.about-us__button {
+    background-color: var(--alt-accent-color);
+    padding: 15px;
+    width: 100%;
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.about-us__button:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.about-us__second-item-2l {
+    margin-right: 150px;
+}
+
+.about-us__second-item-1l,
+.about-us__second-item-3l {
+    margin-left: 150px;
+}
+
+.about-us__second-item-2r {
+    margin-left: 150px;
+}
+
+.about-us__second-item-1r, .about-us__second-item-3r {
+    margin-right: 150px;
+}
+
+.product {
+    margin-top: 100px;
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.product__header {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product__title {
+    font-family: var(--Sweet);
+    color: var(--accent-color);
+    font-size: 4.75rem;
+}
+
+.product__sub-title {
+    font-size: clamp(1.4rem, 2vw, 2rem);
+    font-family: var(--literature);
+}
+
+.product__list {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.product__card {
+    width: 325px;
+    height: 457px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--card-background);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.product__card-header {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product__card-img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product__card-title {
+    font-size: 1.5rem;
+    font-family: "Montserrat";
+    font-weight: 400;
+    text-align: center;
+}
+
+.temp {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+
+.product__link {
+    background-color: var(--alt-accent-color);
+    padding: 10px;
+    text-align: center;
+    color: black;
+    font-family: 'Montserrat';
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.product__link:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.service {
+    margin-top: 100px;
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.service__inner {
+    display: flex;
+    gap: 44px;
+    flex-direction: column;
+    width: 505px;
+}
+
+.service__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 45px;
+}
+
+.service__title {
+    font-size: 6rem;
+    font-size: clamp(4rem, 3vw, 6rem);
+    font-family: var(--literature);
+    text-transform: uppercase;
+    color: var(--accent-color);
+}
+
+.service__sub-title {
+    font-family: var(--literature);
+    color: black;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.service__text {
+    text-align: center;
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    line-height: 150%;
+}
+
+.service__button {
+    background-color: var(--alt-accent-color);
+    font-family: 'Montserrat';
+    color: var(--accent-color);
+    font-size: 1rem;
+    transition: var(--transition);
+    padding: 20px;
+    border-radius: 30px;
+    width: 100%;
+}
+
+.service__button:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.contacts {
+    margin-top: 100px;
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacts__title {
+    font-family: var(--literature);
+    font-size: 2rem;
+    color: black;
+}
+
+.contacts__button {
+    width: 400px;
+    border: 1px solid black;
+    font-size: 1rem;
+    padding: 20px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+
+.contacts__button:hover {
+    background-color: black;
+    color: white;
+}
